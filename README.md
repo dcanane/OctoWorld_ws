@@ -7,21 +7,24 @@
   - [How to use](#how-to-use)
   - [Tips](#tips)
   - [Usage note](#usage-note)
-- [Versão em Português](#versao-em-portugues)
+- [Versão em Português](#versão-em-português)
   - [Pré Requisitos](#pré-requisitos)
   - [Como utilizar](#como-utilizar)
   - [Dicas](#dicas)
   - [Notas de utilização](#notas-de-utilização)
+- [References](#references)
+- [Referências](#referências)
 
 ---
+
 <p align="center"><strong> ▼ English version below ▼ </strong></p>
 
 ## English Version
 
 ### OctoWorld_ws – Generation and Saving of OctoMaps using RTAB-Map SLAM
 
-This repository was created with the goal of generating and saving an **OctoMap** and its corresponding '.bt' (binary tree) file, based on the topics published by RTAB-Map in **ROS2 Humble**.
-In this particular project, an Intel RealSense D455 was used to capture environmental data and apply the **RTAB-Map SLAM** method to incrementally build a 3D map, which is then processed and exported as an OctoMap.
+This repository was created with the goal of generating and saving an **OctoMap** and its corresponding '.bt' (binary tree) file, based on the topics published by RTAB-Map in **ROS2 Humble**.  
+In this particular project, an **Intel RealSense D455** was used to capture environmental data and apply the **RTAB-Map SLAM** method to incrementally build a 3D map, which is then processed and exported as an OctoMap.
 
 ---
 
@@ -55,7 +58,7 @@ In this particular project, an Intel RealSense D455 was used to capture environm
 
 ### Notes:
 
-This launch method was adapted from the original (designed for a ZED camera).
+This launch method was adapted from the original (designed for a ZED camera).  
 RTAB-Map generates a .db file, so choose the most convenient path for you.
 
 **Step 3** (compile the octomap_tools package and run save_octomap_bt to save the .bt map file)
@@ -75,10 +78,10 @@ Then, run the node responsible for saving the map:
 
 ### Tips:
 
-Before saving the map, make sure RTAB-Map has already built the complete layout of the environment.
+Before saving the map, make sure RTAB-Map has already built the complete layout of the environment.  
 You can visualize this using rtabmap_viz (via the point cloud) or in Rviz2, where RTAB-Map topics are displayed *(e.g rtabmap/octomap_full and rtabmap/octomap_binary)*.
 
-Note that RTAB-Map doesn't publish traditional OcTree structures, but rather ColorOcTree.
+Note that RTAB-Map doesn't publish traditional OcTree structures, but rather ColorOcTree.  
 Therefore, you can't use *octomap_server* neither *octomap_saver* directly to export the .bt file, which is why this custom node was created.
 
 
@@ -88,14 +91,13 @@ Make sure the environment map is already built before saving the .bt file.
 
 ---
 
-
 <p align="center"><strong> ▼ Abaixo está a versão em Português ▼ </strong></p>
 
 ## Versão em Português
 
 ### OctoWorld_ws – Geração e Gravação de OctoMaps utilizando SLAM RTAB-Map
 
-Este repositório foi criado com o objetivo de gerar e guardar um **OctoMap** e o respetivo ficheiro '.bt' (binary tree), a partir dos tópicos publicados pelo RTAB-Map em ROS 2.
+Este repositório foi criado com o objetivo de gerar e guardar um **OctoMap** e o respetivo ficheiro '.bt' (binary tree), a partir dos tópicos publicados pelo RTAB-Map em **ROS2 Humble**.  
 No caso particular deste projeto, foi utilizada uma **Intel RealSense D455** para captar a informação do ambiente e aplicar o método **SLAM RTAB-Map** para construir incrementalmente um mapa em 3D, que é processado e exportado como OctoMap.
 
 ---
@@ -133,7 +135,7 @@ No caso particular deste projeto, foi utilizada uma **Intel RealSense D455** par
 
 ### Notas:
 
-Este modo de lançamento foi adaptado do original (criado para uma câmera ZED). 
+Este modo de lançamento foi adaptado do original (criado para uma câmera ZED).  
 O RTAB-Map gera um ficheiro .db, por isso escolhe o caminho mais conveniente para ti.
 
 **3º passo** (compilar o pacote octomap_tools e lançar save_octomap_bt para guardar o mapa.bt)
@@ -153,14 +155,32 @@ Depois, executar o nó responsável por guardar o mapa:
 
 ### Dicas:
 
-Antes de se gravar o mapa, é importante verificar se o RTAB-Map já construiu a planta completa do espaço. 
-Podendo ser visualizado tanto no Rtabmap_viz (através da nuvem de pontos), como no Rviz2 onde se pode ver os tópicos do *rtabmap/octomap_full* e *rtabmap/octomap_binary*. 
+Antes de se gravar o mapa, é importante verificar se o RTAB-Map já construiu a planta completa do espaço.  
+Podendo ser visualizado tanto no Rtabmap_viz (através da nuvem de pontos), como no Rviz2 onde se pode ver os tópicos do *rtabmap/octomap_full* e *rtabmap/octomap_binary*.  
 
-O RTAB-Map não publica estruturas OcTree tradicionais, mas sim ColorOcTree. 
+O RTAB-Map não publica estruturas OcTree tradicionais, mas sim ColorOcTree.  
 Por isso, não é possível usar diretamente o *octomap_server* e *octomap_saver* para exportar o .bt, o que levou à criação deste nó personalizado.
 
 
 
 ### Notas de utilização:
 
-Antes de se gravar o mapa.bt deve já se ter a planta do mapa feita. 
+Antes de se gravar o mapa.bt deve já se ter a planta do mapa feita.  
+
+---
+
+## References
+
+- [octomap_msgs/conversions.h](https://github.com/OctoMap/octomap_msgs/blob/melodic-devel/include/octomap_msgs/conversions.h) – Useful C++ utility for converting ROS messages into ColorOcTree format.
+- [rtabmap_ros issue #876](https://github.com/introlab/rtabmap_ros/issues/876#issuecomment-1407534728) – Clarifies why `octomap_server` cannot save `ColorOcTree` directly from RTAB-Map topics.
+- [octomap_mapping repository](https://github.com/OctoMap/octomap_mapping) – Collection of tools including `octomap_server`, `octomap_saver`, and `octovis`.
+- [rtabmap_ros repository](https://github.com/introlab/rtabmap_ros) – SLAM implementation used to generate maps and publish octomap topics.
+- [Intel RealSense ROS wrapper](https://github.com/IntelRealSense/realsense-ros) – Driver integration for RealSense cameras in ROS2.
+
+## Referências
+
+- [octomap_msgs/conversions.h](https://github.com/OctoMap/octomap_msgs/blob/melodic-devel/include/octomap_msgs/conversions.h) – Conversor essencial para manipular `ColorOcTree` no ROS2.
+- [Issue #876 em rtabmap_ros](https://github.com/introlab/rtabmap_ros/issues/876#issuecomment-1407534728) – Explica o porquê da necessidade de uma solução personalizada para exportar o `.bt`.
+- [Repositório octomap_mapping](https://github.com/OctoMap/octomap_mapping) – Inclui ferramentas úteis como `octomap_server` e `octomap_saver`.
+- [Repositório rtabmap_ros](https://github.com/introlab/rtabmap_ros) – SLAM wrapper usado neste projeto.
+- [RealSense ROS Wrapper](https://github.com/IntelRealSense/realsense-ros) – Driver da câmera RealSense D455 usado com ROS2.
