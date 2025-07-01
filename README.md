@@ -6,12 +6,10 @@
   - [Pre-requires](#pre-requires)
   - [How to use](#how-to-use)
   - [Tips](#tips)
-    
 - [Versão em Português](#versão-em-português)
   - [Pré Requisitos](#pré-requisitos)
   - [Como utilizar](#como-utilizar)
   - [Dicas](#dicas)
-    
 - [References](#references)
 - [Referências](#referências)
 
