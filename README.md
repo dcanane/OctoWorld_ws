@@ -160,16 +160,16 @@ Por isso, não é possível usar diretamente o *octomap_server* e *octomap_saver
 
 ## References
 
-- [octomap_msgs/conversions.h](https://github.com/OctoMap/octomap_msgs/blob/melodic-devel/include/octomap_msgs/conversions.h) – Useful C++ utility for converting ROS messages into ColorOcTree format.
+- [octomap_msgs/conversions.h](https://github.com/OctoMap/octomap_msgs/blob/melodic-devel/include/octomap_msgs/conversions.h) – Useful C++ utility for converting ROS messages into `ColorOcTree` format.
 - [rtabmap_ros issue #876](https://github.com/introlab/rtabmap_ros/issues/876#issuecomment-1407534728) – Clarifies why `octomap_server` cannot save `ColorOcTree` directly from RTAB-Map topics.
-- [octomap_mapping repository](https://github.com/OctoMap/octomap_mapping) – Collection of tools including `octomap_server`, `octomap_saver`, and `octovis`.
+- [octomap_mapping repository](https://github.com/OctoMap/octomap_mapping) – Collection of tools including `octomap_server` e `octomap_saver`.
 - [rtabmap_ros repository](https://github.com/introlab/rtabmap_ros) – SLAM implementation used to generate maps and publish octomap topics.
 - [Intel RealSense ROS wrapper](https://github.com/IntelRealSense/realsense-ros) – Driver integration for RealSense cameras in ROS2.
 
 ## Referências
 
 - [octomap_msgs/conversions.h](https://github.com/OctoMap/octomap_msgs/blob/melodic-devel/include/octomap_msgs/conversions.h) – Conversor essencial para manipular `ColorOcTree` no ROS2.
-- [Issue #876 em rtabmap_ros](https://github.com/introlab/rtabmap_ros/issues/876#issuecomment-1407534728) – Explica o porquê da necessidade de uma solução personalizada para exportar o `.bt`.
+- [Issue #876 em rtabmap_ros](https://github.com/introlab/rtabmap_ros/issues/876#issuecomment-1407534728) – Explica porque o `octomap_server` não consegue salvar `ColorOcTree`, diretamente dos tópicos publicados pelo Rtab-Map.
 - [Repositório octomap_mapping](https://github.com/OctoMap/octomap_mapping) – Inclui ferramentas úteis como `octomap_server` e `octomap_saver`.
-- [Repositório rtabmap_ros](https://github.com/introlab/rtabmap_ros) – SLAM wrapper usado neste projeto.
+- [Repositório rtabmap_ros](https://github.com/introlab/rtabmap_ros) – Técnica SLAM usada neste projeto.
 - [RealSense ROS Wrapper](https://github.com/IntelRealSense/realsense-ros) – Driver da câmera RealSense D455 usado com ROS2.
