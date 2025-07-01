@@ -92,7 +92,7 @@ Therefore, you can't use *octomap_server* neither *octomap_saver* directly to ex
 ### OctoWorld_ws – Geração e Gravação de OctoMaps utilizando SLAM RTAB-Map
 
 Este repositório foi criado com o objetivo de gerar e guardar um **OctoMap** e o respetivo ficheiro '.bt' (binary tree), a partir dos tópicos publicados pelo RTAB-Map em **ROS2 Humble**.  
-No caso particular deste projeto, foi utilizada uma **Intel RealSense D455** para captar a informação do ambiente e aplicar o método **SLAM RTAB-Map** para construir incrementalmente um mapa em 3D, que é processado e exportado como OctoMap.
+No caso particular deste projeto, foi utilizada uma **Intel RealSense D455** para captar a informação do ambiente e aplicar o método **SLAM RTAB-Map** para construir, incrementalmente, um mapa em 3D, que possa ser processado e exportado como OctoMap.
 
 ---
 
