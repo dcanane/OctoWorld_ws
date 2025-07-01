@@ -7,7 +7,7 @@
   - [How to use](#how-to-use)
   - [Tips](#tips)
   - [Usage note](#usage-note)
-- [Versão em Português](#portuguese-version)
+- [Versão em Português](#versão-em-portugues)
   - [Pré Requisitos](#pré-requisitos)
   - [Como utilizar](#como-utilizar)
   - [Dicas](#dicas)
