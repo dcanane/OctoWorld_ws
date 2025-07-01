@@ -6,7 +6,6 @@
   - [Pre-requires](#pre-requires)
   - [How to use](#how-to-use)
   - [Tips](#tips)
-  - [Usage note](#usage-note)
 - [Versão em Português](#versão-em-português)
   - [Pré Requisitos](#pré-requisitos)
   - [Como utilizar](#como-utilizar)
@@ -85,10 +84,6 @@ Note that RTAB-Map doesn't publish traditional OcTree structures, but rather Col
 Therefore, you can't use *octomap_server* neither *octomap_saver* directly to export the .bt file, which is why this custom node was created.
 
 
-### Usage note:
-
-Make sure the environment map is already built before saving the .bt file.
-
 ---
 
 <p align="center"><strong> ▼ Abaixo está a versão em Português ▼ </strong></p>
@@ -160,12 +155,7 @@ Podendo ser visualizado tanto no Rtabmap_viz (através da nuvem de pontos), como
 
 O RTAB-Map não publica estruturas OcTree tradicionais, mas sim ColorOcTree.  
 Por isso, não é possível usar diretamente o *octomap_server* e *octomap_saver* para exportar o .bt, o que levou à criação deste nó personalizado.
-
-
-
-### Notas de utilização:
-
-Antes de se gravar o mapa.bt deve já se ter a planta do mapa feita.  
+ 
 
 ---
 
