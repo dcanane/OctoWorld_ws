@@ -28,11 +28,11 @@ In this particular project, an **Intel RealSense D455** was used to capture envi
 
 ### Pre-requires:
 
-    ROS2 Humble
-    Intel RealSense SDK 2.0
-    realsense2_camera package installed
-    rtabmap_ros installed and working (with octomap_plugins)
-    octomap_msgs and octomap installed (sudo apt install ros-humble-octomap*)
+ -ROS2 Humble
+ -Intel RealSense SDK 2.0
+ -realsense2_camera package installed
+ -rtabmap_ros installed and working (with octomap_plugins)
+ -octomap_msgs and octomap installed (sudo apt install ros-humble-octomap*)
 
 ### How to use:
 
@@ -98,11 +98,11 @@ No caso particular deste projeto, foi utilizada uma **Intel RealSense D455** par
 
 ### Pré Requisitos:
 
-    ROS2 Humble
-    Intel RealSense SDK 2.0
-    Pacote `realsense2_camera` instalado
-    rtabmap_ros instalado e funcional (com octomap_plugins)
-    `octomap_msgs` e `octomap` instalados (`sudo apt install ros-humble-octomap*`)
+-ROS2 Humble
+-Intel RealSense SDK 2.0
+-Pacote `realsense2_camera` instalado
+-rtabmap_ros instalado e funcional (com octomap_plugins)
+-`octomap_msgs` e `octomap` instalados (`sudo apt install ros-humble-octomap*`)
 
 
 
