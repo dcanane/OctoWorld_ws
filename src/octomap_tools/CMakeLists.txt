@@ -6,7 +6,6 @@ find_package(rclcpp REQUIRED)
 find_package(octomap REQUIRED)
 find_package(octomap_msgs REQUIRED)
 
-# Diretório com código C++
 add_executable(save_octomap_bt src_cpp/save_octomap_bt.cpp)
 ament_target_dependencies(save_octomap_bt rclcpp octomap_msgs octomap)
 
